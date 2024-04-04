@@ -1,0 +1,66 @@
+/* デスクトップ版 
+ ------------------------------------------ */
+@media (min-width:800px) {
+
+  /* ヘッダー */
+header {
+  width: 100vw;
+  padding-top: 3rem;
+  background-color: aqua;
+}
+
+
+
+  .page-header {
+    display: grid;
+    grid-template-columns: 25vw 50vw 25vw;
+
+  }
+
+  /* ロゴ */
+  .logo {
+    height: 35px;
+  }
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ログイン・ログアウト・新規登録リンク */
+.register-link {
+  color: inherit; /* 親要素のテキスト色を継承する */
+  text-decoration: none; /* 下線を消す */
+}
+
+}
+
+/* main
+------------------------------------------ */
+
+
+/* サイドバー左右とメインの枠組み */
+.contents-wrap {
+  display: flex;
+  width: 100vw;
+}
+  /* 左 */
+  .left-side {
+    background-color: brown;
+    width: auto;
+    margin: auto;
+  }
+
+  /* メイン */
+  .center {
+    background-color: rgb(251, 157, 226);
+    width: 58vw;
+  }
+
+  /* 右 */
+  .right-side {
+    background-color: blue;
+    width: auto;
+    margin: auto;
+  }
+

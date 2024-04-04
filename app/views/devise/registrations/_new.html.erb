@@ -1,19 +1,19 @@
-<header class='second-header'>
-  <%= link_to image_tag("logo.png", class:"form-logo "), "/" %>
-</header>
 
-<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
-<div class='form-wrap'>
-  <div class='form-header'>
-    <h1 class='form-header-text'>ログイン</h1>
+  <%#= render 'shared/error_messages', model: f.object %>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ニックネーム</label>
+      <span class="required">必須</span>
+    </div>
+    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) プレボ太郎", maxlength:"40" %>
   </div>
-  
-    <div class="form-group">
+  <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">メールアドレス</label>
       <span class="required">必須</span>
     </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"emailアドレスをご入力ください", autofocus: true %>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
@@ -32,11 +32,5 @@
   </div>
 
   <div class='register-btn'>
-    <%= f.submit "ログインする" ,class:"register-red-btn" %>
+    <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
-</div>
-<% end %>
-<!-- フッター -->
-<div class="second-footer">
-  <%= image_tag "logo.png", class: "form-logo" %>
-</div>
