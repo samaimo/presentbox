@@ -1,4 +1,6 @@
-<%= render partial: "shared/second-header" %>
+<header class='second-header'>
+  <%= link_to image_tag("logo.png", class:"form-logo "), "/" %>
+</header>
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
@@ -8,4 +10,6 @@
 </div>
 <% end %>
 <!-- フッター -->
-<%= render 'shared/footer' %>
+<div class="second-footer">
+  <%= image_tag "logo.png", class: "form-logo" %>
+</div>
