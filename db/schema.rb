@@ -60,6 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_05_015112) do
     t.string "title", null: false
     t.string "present_name", null: false
     t.text "text"
+    t.text "message"
     t.string "shop"
     t.integer "price"
     t.text "memo"

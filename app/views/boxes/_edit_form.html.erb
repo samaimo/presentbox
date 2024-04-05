@@ -1,65 +1,68 @@
-
-  <%# プロフィール画像 %>
-  <div class="form-group">
-    <div class="form-text">
-      アイコン画像
-      <span class="required">必須</span>
+<%= form_with(model: @box, local: true) do |f| %>
+  <div class="post">
+    <%# プロフィール画像 %>
+    <div class="form-group">
+      <div class="form-text">
+        アイコン画像
+        <span class="required">必須</span>
+      </div>
+      <div id="previews">
+        <!-- 既存の画像のプレビュー -->
+        <% if @box.image.attached? %>
+          <%= image_tag url_for(@box.image), class: "box-show-image", id: "image-preview", data: { imageUrl: url_for(@box.image) } %>
+        <% end %>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"box-image" %>
+        </div>
+      </div>
     </div>
     <br>
-    <div id="previews">
-      <!-- 既存の画像のプレビュー -->
-      <% if @box.image.attached? %>
-        <%= image_tag url_for(@box.image), class: "prof-image", id: "image-preview", data: { imageUrl: url_for(@box.image) } %>
+    <%# /プロフィール画像 %>
+    <br>
+    <div class="profile">
+      <!-- プロフ項目 -->
+      <% profile_fields = [
+        { label: 'プレゼントボックスのなまえ', attribute: :box_name, placeholder: '（必須 40文字まで)', maxlength: '40', required: true },
+        { label: 'お誕生日', attribute: :birth_day, select_class: 'select-birth', id: 'birth-date', year_start: 1930, year_end: Time.now.year, prompt: '--', separator: '%s' ,required: false},
+        { label: '記念日', attribute: :anniversary_day, select_class: 'select-anniversary', id: 'anniversary-date', year_start: 1930, year_end: Time.now.year, prompt: '--', separator: '%s' ,required: false},
+        { label: '記念日のメモ', attribute: :anniversary_memo, placeholder: '例) おうち記念日（400文字まで)', maxlength: '400',required: false},
+        { label: '所属・職業・特徴', attribute: :occupation, placeholder: '例) 会社員　日曜大工（必須 40文字まで)', maxlength: '40' ,required: false},
+        { label: '趣味・特技', attribute: :hobbies, placeholder: '例) お昼寝（40文字まで)', maxlength: '40' ,required: false},
+        { label: '好きなもの', attribute: :likes, placeholder: '例) 乾燥ささみ' ,required: false},
+        { label: '苦手なもの', attribute: :dislikes, placeholder: '例) 大きな音' ,required: false}
+      ] %>
+
+      <% profile_fields.each do |field| %>
+        <div class="form-edit-wrapper">
+          <label for="<%= field[:attribute] %>"><%= field[:label] %> <% if field[:required] %><span class="required">必須</span><% end %></label>
+          <div class="input-birth-wrap">
+            <% if field[:attribute] == :birth_day || field[:attribute] == :anniversary_day %>
+              <%= raw sprintf(
+                f.date_select(
+                  field[:attribute],
+                  class: field[:select_class],
+                  id: field[:id],
+                  use_month_numbers: true,
+                  prompt: field[:prompt],
+                  start_year: field[:year_start],
+                  end_year: field[:year_end],
+                  date_separator: field[:separator]),
+                "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+            <% else %>
+              <%= f.text_area field[:attribute], class: "box-text", id: field[:attribute], placeholder: field[:placeholder], maxlength: field[:maxlength] %>
+            <% end %>
+          </div>
+        </div>
       <% end %>
-      <div class="click-upload"><br>
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"box-image" %>
-      </div>
+    </div>
+
+    <!-- 変更ボタン -->
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する", class: "sell-btn" %>
+      <%= link_to 'もどる', box_path, class: "back-btn" %>
     </div>
   </div>
-  <br>
-  <%# /プロフィール画像 %>
-  <br>
-
-  <!-- プロフ項目 -->
-  <% profile_fields = [
-    { label: 'プレゼントボックスのなまえ', attribute: :box_name, placeholder: '（必須 40文字まで)', maxlength: '40', required: true },
-    { label: 'お誕生日', attribute: :birth_day, select_class: 'select-birth', id: 'birth-date', year_start: 1930, year_end: Time.now.year, prompt: '--', separator: '%s' ,required: false},
-    { label: '記念日', attribute: :anniversary_day, select_class: 'select-anniversary', id: 'anniversary-date', year_start: 1930, year_end: Time.now.year, prompt: '--', separator: '%s' ,required: false},
-    { label: '記念日のメモ', attribute: :anniversary_memo, placeholder: '例) おうち記念日（400文字まで)', maxlength: '400',required: false},
-    { label: '所属・職業・特徴', attribute: :occupation, placeholder: '例) 会社員　日曜大工（必須 40文字まで)', maxlength: '40' ,required: false},
-    { label: '趣味・特技', attribute: :hobbies, placeholder: '例) お昼寝（40文字まで)', maxlength: '40' ,required: false},
-    { label: '好きなもの', attribute: :likes, placeholder: '例) 乾燥ささみ' ,required: false},
-    { label: '苦手なもの', attribute: :dislikes, placeholder: '例) 大きな音' ,required: false}
-  ] %>
-
-  <% profile_fields.each do |field| %>
-    <div class="form-edit-wrapper">
-      <label for="<%= field[:attribute] %>"><%= field[:label] %> <% if field[:required] %><span class="required">必須</span><% end %></label>
-      <div class="input-birth-wrap">
-        <% if field[:attribute] == :birth_day || field[:attribute] == :anniversary_day %>
-          <%= raw sprintf(
-            f.date_select(
-              field[:attribute],
-              class: field[:select_class],
-              id: field[:id],
-              use_month_numbers: true,
-              prompt: field[:prompt],
-              start_year: field[:year_start],
-              end_year: field[:year_end],
-              date_separator: field[:separator]),
-            "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-        <% else %>
-          <%= f.text_area field[:attribute], class: "box-text", id: field[:attribute], placeholder: field[:placeholder], maxlength: field[:maxlength] %>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
-
-  <!-- 変更ボタン -->
-  <div class="sell-btn-contents">
-    <%= f.submit "変更する", class: "sell-btn" %>
-    <%= link_to 'もどる', box_path, class: "back-btn" %>
-  </div>
+<% end %>

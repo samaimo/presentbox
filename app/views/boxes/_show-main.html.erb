@@ -1,0 +1,39 @@
+<div class="post">
+  <!--画像-->
+  <div class="box-show-image-wrap">
+    <%= image_tag @box.image, class: "box-show-image" %>
+  </div>
+  <div class="post-box-wrap">
+    <p>名前</p>
+    <p>画像</p>
+    <p>誕生日</p>
+    <p>所属・職業・特徴</p>
+    <p>記念日</p>
+    <p>好きなもの</p>
+    <p>苦手なもの</p>
+  </div>
+
+  <div class="post-box-wrap2">
+    <!--名前-->
+    <p><%= @box.box_name %></p>
+
+    <!--誕生日-->
+    <p id="birth-date" class="birth-age">
+      <% if @box.birth_day.present? %>
+        <%= @box.birth_day.strftime("%Y年 %-m月 %-d日") %>
+      <% else %>
+        未設定です
+      <% end %>
+      <!-- 年齢と月齢の表示 -->
+      <p id="age-and-months" class="age">(年齢を表示する)</p>
+    </p>
+    <!--所属・職業・特徴-->
+    <p><%= @box.occupation %></p>
+    <!--記念日-->
+    <!--ここに記念日を表示するためのコードを追加-->
+    <!--好きなもの-->
+    <p><%= @box.likes %></p>
+    <!--苦手なもの-->
+    <p><%= @box.dislikes %></p>
+  </div>
+</div>

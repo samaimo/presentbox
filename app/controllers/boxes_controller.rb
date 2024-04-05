@@ -1,6 +1,6 @@
 class BoxesController < ApplicationController
-  before_action :set_box, only: [:edit, :show, :update, :destroy]
-  before_action :move_to_index, except: [:index, :update, :show, :destroy]
+  before_action :set_box, only: %i[edit show update destroy]
+  before_action :move_to_index, except: %i[index update show destroy]
 
   def index
     @boxes = Box.includes(:user).order('created_at DESC')

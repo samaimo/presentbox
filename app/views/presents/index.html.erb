@@ -13,12 +13,15 @@
       <!--投稿一覧-->
       <div class="post-index">
         <% @presents.each do |present| %>
-          <%= link_to present_path(present) do %>
-            <div class="post-image-wrap">
-              <%= image_tag present.image, class:"post-image" %>
-            </div>
-          <% end %>
+          <% if present.image.attached? %>
+            <%= link_to present_path(present) do %>
+              <div class="post-image-wrap">
+                <%= image_tag present.image, class:"post-image" %>
+              </div>
+            <% end %>
+
         <% end %>
+      <% end %>
       </div>
     </div>
 

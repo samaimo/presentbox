@@ -60,6 +60,13 @@
 
     <div class="form-group">
       <div class='form-text-wrap'>
+        <label class="message">message</label>
+      </div>
+      <%= f.text_area :memo, class:"input-caption", id:"message", placeholder:"例) 喜んでくれますように！ " %>
+    </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
         <label class="form-text">shop</label>
       </div>
       <%= f.text_area :shop, class:"input-default", placeholder:"例) shopname.here" %>
