@@ -1,20 +1,12 @@
-/* デスクトップ版 
- ------------------------------------------ */
-@media (min-width:800px) {
-
   /* ヘッダー */
 header {
   width: 100vw;
   padding-top: 3rem;
-  background-color: aqua;
 }
-
-
 
   .page-header {
     display: grid;
     grid-template-columns: 25vw 50vw 25vw;
-
   }
 
   /* ロゴ */
@@ -33,7 +25,39 @@ header {
   text-decoration: none; /* 下線を消す */
 }
 
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーー
+　共通
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
+header, .right-side, .left-side {
+  background-color: aqua;
+}
+
+main {
+  background-color: bisque;
+}
+
+
+/* ---------------------------------------
+ボックス追加
+ーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.add-box-wrap {
+  display: flex;
+  justify-content: right;
+}
+
+/* ボックス追加ボタン */
+.add-box-button {
+  width: 40px;
+  height: 40px;
+}
+
 
 /* main
 ------------------------------------------ */
@@ -54,7 +78,7 @@ header {
   /* メイン */
   .center {
     background-color: rgb(251, 157, 226);
-    width: 58vw;
+    width: 50vw;
   }
 
   /* 右 */
@@ -64,3 +88,204 @@ header {
     margin: auto;
   }
 
+/* -------------------------------------------------- */
+
+  /* 画像のプレビュー */
+  .preview-image {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+
+/* ボックスアイコンとボックス名のセット */
+.box-menu {
+  height: 130px;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.box-set {
+  width: 100px;
+  height: 100px; /* 高さを自動に */
+  margin-top: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column; /* アイテムを縦方向に並べる */
+  align-items: center; /* アイテムを中央寄せ */
+}
+
+  /* ボックスの一覧表示用画像 */
+  .box-icon {
+    width: 90%;
+    height: 90%; /* 高さを自動に */
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+  /* ボックス名 */
+  .box-name {
+    text-align: center;
+  }
+
+
+  /* 投稿画像 */
+.post-image {
+  width: 100px;
+}
+
+/* -------------------------------------------- */
+/* プレゼント投稿ボタン */
+.purchase-btn {
+  width: 100px;
+  height: 100px;
+  background: #ff7b8d;
+  text-align: center;
+  border-radius: 5%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Noto Sans JP", Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.purchase-btn-text-small {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.purchase-btn-icon {
+  width: 70px;
+  height: 70px;
+}
+
+/* -------------------------------------------------------
+グリッド
+------------------------------------------------------- */
+
+.post {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 20px;
+}
+
+/* タイトル */
+.post-title {
+  height: auto;
+  font-size: 50px;
+  grid-column: 1/9;
+  grid-row: 2/5;
+  font-family: "Hina Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 50px;
+  height: 50px;
+  z-index: 10;
+}
+
+/* 画像 */
+.post-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  grid-column: 5/9;
+  grid-row: 2/5;
+  border-bottom-left-radius: 20px;
+}
+
+/* サブタイトル */
+.sub-title {
+  grid-column: 1/4;
+  grid-row: 3/5;
+  font-size: 16px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+
+
+.post-boxname {
+  grid-column: 6/9;
+  grid-row: 5/6;
+}
+
+/* ボックス名 */
+.post-box-name {
+  grid-column: 2/9;
+  grid-row: 1;
+}
+
+
+/* キャプション */
+.caption {
+  grid-column: 1/5;
+  grid-row: 3/5;  
+  font-size: 16px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* URLのフォントサイズ */
+.url, .post-price, .post-shop {
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+/* 金額アイコン */
+.price-image {
+  height: 18px;
+}
+
+/* URL表示 */
+.url {
+  vertical-align: middle;
+}
+
+/* 宛先のボックス画像 */
+.post-box-image {
+  height: 100px;
+  border-radius: 5px;
+}
+
+
+
+/* ---------------------------------------
+form
+ */
+
+ .form-control {
+  width: 100%;
+  margin-top: 5px;
+  height: 40px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.input-caption {
+  width: 100%;
+  margin-top: 5px;
+  height: 100px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
