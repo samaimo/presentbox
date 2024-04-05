@@ -4,6 +4,7 @@ class CreatePresents < ActiveRecord::Migration[7.0]
       t.string      :title, null: false
       t.string      :present_name, null: false
       t.text        :text
+      t.text        :message
       t.string      :shop
       t.integer     :price
       t.text        :memo
