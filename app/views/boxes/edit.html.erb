@@ -9,14 +9,7 @@
       <!--メイン表示-->
       <!-- 編集と削除ボタン -->
       <div class="prof-top">
-        <div class="ed-button">
-          <%= link_to edit_box_path(@box.id) do %>
-            Preboを編集
-          <% end %>
-        </div>
-        <div class="ed-button">
-          <%= link_to "削除する", box_path(@box), data: { turbo_method: :delete }, class: "box-destroy" %>
-        </div>
+
       </div>
       <%= render 'edit_form' %>
 

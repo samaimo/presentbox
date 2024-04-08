@@ -35,12 +35,16 @@ a {
   color: inherit;
 }
 
-header, .right-side, .left-side {
-  background-color: rgb(255, 255, 255);
+header {
+  background-color: rgb(255, 85, 85);
 }
 
 main {
-  background-color: bisque;
+  background-color: rgb(243, 243, 243);
+}
+
+.right-side, .left-side {
+  background-color: aquamarine;
 }
 
 
@@ -70,20 +74,18 @@ main {
 }
   /* 左 */
   .left-side {
-    background-color: brown;
     width: auto;
     margin: auto;
   }
 
   /* メイン */
   .center {
-    background-color: rgb(251, 157, 226);
+    background-color: rgb(255, 255, 255);
     width: 50vw;
   }
 
   /* 右 */
   .right-side {
-    background-color: blue;
     width: auto;
     margin: auto;
   }
@@ -102,6 +104,7 @@ main {
 
 /* ボックスアイコンとボックス名のセット */
 .box-menu {
+  margin-top: 20px;
   height: 130px;
   display: flex;
   overflow-x: hidden;
@@ -109,7 +112,7 @@ main {
 
 .box-set {
   width: 100px;
-  height: 100px; /* 高さを自動に */
+  height: 100px;
   margin-top: 10px;
   margin-right: 10px;
   display: flex;
@@ -119,8 +122,8 @@ main {
 
   /* ボックスの一覧表示用画像 */
   .box-icon {
-    width: 90%;
-    height: 90%; /* 高さを自動に */
+    width: 70px;
+    height: 70px;
     border-radius: 5px;
     object-fit: cover;
   }
@@ -128,13 +131,12 @@ main {
   /* ボックス名 */
   .box-name {
     text-align: center;
+    font-size: 70%;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
   }
-
-
-  /* 投稿画像 */
-.post-image {
-  width: 100px;
-}
 
 /* -------------------------------------------- */
 /* プレゼント投稿ボタン */
@@ -169,14 +171,37 @@ main {
 }
 
 /* -------------------------------------------------------
+プレゼント詳細画面
+------------------------------------------------------- */
+.dear-name {
+  font-size: 19px;
+}
+
+.occupation-wrap {
+  grid-column: 5/9;
+  grid-row: 1/2;
+}
+
+
+
+
+/* -------------------------------------------------------
 グリッド
 ------------------------------------------------------- */
 
 .post {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(13, auto);
   grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+
+.post-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
 }
 
 /* タイトル */
@@ -184,13 +209,20 @@ main {
   height: auto;
   font-size: 50px;
   grid-column: 1/9;
-  grid-row: 2/5;
-  font-family: "Hina Mincho", serif;
+  grid-row: 2;
+  font-family: "Shippori Mincho", serif;
   font-weight: 400;
   font-style: normal;
   line-height: 50px;
   height: 50px;
   z-index: 10;
+
+}
+
+/* メッセージ */
+.message {
+  grid-column: 1/5;
+  grid-row: 3/auto;
 }
 
 .post-article {
@@ -203,27 +235,28 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-bottom-left-radius: 20px;
+}
 
+/* インデックス表示画像 */
+.post-index-image {
+  width: 100%;
+  height: 100%;
   border-bottom-left-radius: 20px;
 }
 
 /* サブタイトル */
 .sub-title {
-  grid-column: 1/4;
-  grid-row: 3/5;
+  grid-column: 2/5;
+  grid-row: 1/2;
   font-size: 16px;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 700;
   font-style: normal;
+  margin-top: 50px;
 
 }
 
-
-
-.post-boxname {
-  grid-column: 6/9;
-  grid-row: 5/6;
-}
 
 /* ボックス名 */
 .post-box-name {
@@ -231,15 +264,49 @@ main {
   grid-row: 1;
 }
 
+.present-show-boxicon {
+  grid-column: 1;
+  grid-row: 1;
+}
 
-/* キャプション */
+/* メッセージ */
 .caption {
   grid-column: 1/5;
-  grid-row: 3/5;  
+  grid-row: 4/auto;  
   font-size: 16px;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #ccc;
+  color:#ffffff;
+  font-weight: 600;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+  padding: 30px;
+  display: inline-block; /* コンテンツに合わせて枠を調整 */
+}
+
+
+/* メッセージ */
+.message {
+  grid-column: 1/5;
+  grid-row: 3/auto;  
+  font-size: 16px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: solid #ffeb7b 5px;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+  padding: 30px;
+  display: inline-block; /* コンテンツに合わせて枠を調整 */
+  line-height: 1.5;
+}
+
+.title-text {
+  font-size: 14px;
 }
 
 /* URLのフォントサイズ */
@@ -260,7 +327,9 @@ main {
 
 /* 宛先のボックス画像 */
 .post-box-image {
-  height: 100px;
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -271,8 +340,7 @@ form
  */
 
  .form-control {
-  width: 100%;
-  margin-top: 5px;
+  width: 200px;
   height: 40px;
   padding: 10px 16px 8px;
   border-radius: 4px;
@@ -280,27 +348,33 @@ form
   background: #f8f8f8;
   font-size: 16px;
   resize: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .input-caption {
-  width: 100%;
+  width: 400px;
   margin-top: 5px;
   height: 100px;
   padding: 10px 16px 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  background: #f8f8f8;
+  background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
 }
+
+
 
 /* -------------------------- 
       ボックス　詳細表示
 -------------------------- */
 /* 画像表示 */
 .box-show-image {
-  height: 200px;
-  padding: 10px;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 10%;
 }
 
 .box-show-image-wrap {
@@ -325,11 +399,67 @@ form
 ---------------------------*/
 
 .profile {
-  grid-column: 2/9;
-  grid-row: 1;
+  grid-column: 3/9;
+  grid-row: 2;
+  margin-bottom: 20px;
 }
 
 .sell-btn-contents {
-  grid-column: 2/3;
-  grid-row: 2;
+  grid-column: 3 / 4;
+  grid-row: 3;
+}
+
+/* 入力フォーム */
+.box-text, 
+.box-text-small {
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* テキストエリア */
+.box-text {
+  width: 80%;
+  margin-top: 5px;
+  height: 100px;
+  padding: 5px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+
+.box-text-small {
+  width: 70%;
+  margin-top: 5px;
+  height: 30px;
+  padding: 5px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.form-box-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  grid-column: 1;
+  grid-row: 2/3;
+
+}
+
+/* 画像選択ボタン */
+.click-upload {
+  width: 200px;
+}
+
+
+/* -----------------------------
+フォント指定
+ーーーーーーーーーーーーーーーーーーーーー */
+
+.dear-name, .occupation {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }

@@ -42,8 +42,7 @@ class BoxesController < ApplicationController
   private
 
   def box_params
-    params.require(:box).permit(:box_name, :"birth_day(1i)", :"birth_day(2i)", :"birth_day(3i)",
-                                :"anniversary_day(1i)", :"anniversary_day(2i)", :"anniversary_day(3i)", :anniversary_memo,
+    params.require(:box).permit(:box_name, :birth_day, :anniversary_day, :anniversary_memo,
                                 :occupation, :hobbies, :likes, :dislikes,
                                 :image).merge(user_id: current_user.id)
   end

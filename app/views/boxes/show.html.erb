@@ -7,7 +7,9 @@
     </div>
     <div class="center">
       <!--メイン表示-->
-      <%= render 'show-ed' %>
+      <% if current_user == @box.id %>
+        <%= render 'show-ed' %>
+      <% end %>
       <%= render 'show-main' %>
 
     </div>

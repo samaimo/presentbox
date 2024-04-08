@@ -19,30 +19,36 @@
   </div>
 
 
-    <%# プロフィール画像 %>
-    <div class="form-group">
-      <div class="form-text">
-        プロフィール画像
-        <span class="required">必須</span>
-      </div>
-      <!--画像プレビューの表示-->
-      <div id="previews" class="preview-present"></div>
-
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image %>
-      </div>
-      
+  <%# プロフィール画像 %>
+  <div class="form-group">
+    <div class="form-text">
+      プロフィール画像
+      <span class="required">必須</span>
     </div>
+    <!-- 画像プレビューの表示 -->
+    <div id="previews" class="preview-present">
+      <% if @box.image.attached? %>
+        <%= image_tag url_for(@box.image), class: "preview-image", id: "image-preview" %>
+      <% end %>
+    </div>
+
+    <div class="click-upload">
+      <p>
+        ファイルをアップロード
+      </p>
+      <%= f.file_field :image, id: "user-image" %>
+    </div>
+  </div>
+
+    <div class='register-btn'>
+      <%= f.submit "つくる" ,class:"register-red-btn" %>
+    </div>
+  </div>
+  <% end %>
+</div>
     <%# /プロフィール画像 %>
 
-  <div class='register-btn'>
-    <%= f.submit "つくる" ,class:"register-red-btn" %>
-  </div>
-</div>
-<% end %>
+
 
 <%= render "shared/second-footer"%>
 
