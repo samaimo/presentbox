@@ -261,6 +261,7 @@ main {
   height: 200px;
   border-bottom-left-radius: 20px;
   object-fit: cover;
+  filter:blur(20px);
 }
 
 /* サブタイトル */

@@ -16,7 +16,7 @@
           <% if present.image.attached? %>
             <%= link_to present_path(present) do %>
               <div class="post-image-wrap">
-                <%= image_tag present.image, class:"post-index-image" %>
+                <%= image_tag present.image, class:"post-index-image", id:"show" %>
               </div>
             <% end %>
         <% end %>
