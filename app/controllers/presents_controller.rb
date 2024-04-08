@@ -2,7 +2,11 @@ class PresentsController < ApplicationController
   before_action :set_present, only: %i[show edit update destroy]
 
   def index
-    @boxes = Box.all.order('created_at DESC')
+    if current_user
+      @boxes = current_user.boxes
+    else
+      redirect_to new_user_session_path
+    end
     @presents = Present.all.order('created_at DESC')
   end
 

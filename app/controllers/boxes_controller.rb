@@ -1,4 +1,5 @@
 class BoxesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_box, only: %i[edit show update destroy]
   before_action :move_to_index, except: %i[index update show destroy]
 
