@@ -25,6 +25,12 @@ header {
   text-decoration: none; /* 下線を消す */
 }
 
+.user-nickname {
+  margin-right: 30px;
+  color:#f8f8f8;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
 
 
 /* ーーーーーーーーーーーーーーーーーーーーーーーーーーー
