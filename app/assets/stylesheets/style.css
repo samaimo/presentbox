@@ -110,17 +110,18 @@ main {
 
 /* ボックスアイコンとボックス名のセット */
 .box-menu {
-  margin-top: 20px;
-  height: 130px;
-  display: flex;
-  overflow-x: hidden;
+  margin-bottom: 20px;
+  display: grid;
+  grid-auto-flow: column; /* 新しく追加します */
+  grid-template-rows: 1fr; /* grid-template-rowをgrid-template-rowsに修正します */
+  overflow-x: auto; /* overflow-x:hiddenをoverflow-x:autoに修正します */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 }
 
 .box-set {
   width: 100px;
-  height: 100px;
+  height: 120px;
   margin-top: 10px;
-  margin-right: 10px;
   display: flex;
   flex-direction: column; /* アイテムを縦方向に並べる */
   align-items: center; /* アイテムを中央寄せ */
@@ -132,14 +133,16 @@ main {
     height: 70px;
     border-radius: 5px;
     object-fit: cover;
+    box-shadow: 5px 5px 0px 0 rgb(255, 216, 99);
   }
 
   /* ボックス名 */
   .box-name {
+    margin-top: 10px;
     text-align: center;
-    font-size: 70%;
+    font-size: 80%;
     font-family: "Zen Kaku Gothic New", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
 
   }
@@ -191,6 +194,8 @@ main {
 
 
 
+
+
 /* -------------------------------------------------------
 グリッド
 ------------------------------------------------------- */
@@ -207,7 +212,6 @@ main {
 .post-index-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
 }
 
 /* タイトル */

@@ -11,17 +11,17 @@
       <%= render 'index_main' %>
 
       <!--投稿一覧-->
-        <div class="post-index-grid">
-          <% @presents.each do |present| %>
-            <% if present.image.attached? %>
-              <%= link_to present_path(present) do %>
-                <div class="post-image-wrap">
-                  <%= image_tag present.image, class:"post-index-image" %>
-                </div>
-              <% end %>
-          <% end %>
+      <div class="post-index-grid">
+        <% @presents.each do |present| %>
+          <% if present.image.attached? %>
+            <%= link_to present_path(present) do %>
+              <div class="post-image-wrap">
+                <%= image_tag present.image, class:"post-index-image" %>
+              </div>
+            <% end %>
         <% end %>
-        </div>
+      <% end %>
+      </div>
     </div>
 
     <div class="right-side">

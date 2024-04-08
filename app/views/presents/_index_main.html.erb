@@ -1,21 +1,23 @@
-
-<!-- プレゼントボックスの表示 -->
-<div class="box-menu">
-  <!-- ボックス一覧表示 -->
-  <% @boxes.each do |box| %>
-      <%= link_to box_path(box.id) do %>
-        <div class="box-set">
-          <%= image_tag box.image, class:"box-icon" if box.image.attached? %>
-          <div class="box-name">
-            <%= box.box_name %></div>
-        </div>
-      <% end %>
-  <% end %>
-</div>
 <!--ボックス追加ボタン-->
 <div class="add-box-wrap">
   <%= link_to new_box_path do %>
     <%= image_tag "add_box.png", class: "add-box-button" %> 
   <% end %>
 </div>
+<!-- プレゼントボックスの表示 -->
+<div class="box-menu-control">
+  <div class="box-menu">
+    <!-- ボックス一覧表示 -->
+    <% @boxes.each do |box| %>
+        <%= link_to box_path(box.id) do %>
+          <div class="box-set">
+            <%= image_tag box.image, class:"box-icon" if box.image.attached? %>
+            <div class="box-name">
+              <%= box.box_name %></div>
+          </div>
+        <% end %>
+    <% end %>
+  </div>
+</div>
+
 
