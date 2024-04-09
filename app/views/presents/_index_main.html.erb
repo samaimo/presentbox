@@ -1,11 +1,12 @@
-<!--ボックス追加ボタン-->
-<div class="add-box-wrap">
-  <%= link_to new_box_path do %>
-    <%= image_tag "add_box.png", class: "add-box-button" %> 
-  <% end %>
-</div>
+
 <!-- プレゼントボックスの表示 -->
 <div class="box-menu-control">
+    <!--ボックス追加ボタン-->
+    <div class="add-box-wrap">
+      <%= link_to new_box_path do %>
+        <%= image_tag "add_box.png", class: "add-box-button" %> 
+      <% end %>
+    </div>
   <div class="box-menu">
     <!-- ボックス一覧表示 -->
     <% @boxes.each do |box| %>

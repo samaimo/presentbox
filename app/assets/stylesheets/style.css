@@ -110,13 +110,13 @@ main {
 
 /* ボックスアイコンとボックス名のセット */
 .box-menu {
-  margin-bottom: 20px;
+  margin-bottom: 70px;
   display: grid;
   grid-auto-flow: column; /* 新しく追加します */
   grid-template-columns: 110px 110px 110px 110px 110px 110px 110px 110px;
   grid-template-rows: 1fr; /* grid-template-rowをgrid-template-rowsに修正します */
   overflow-x: auto; /* overflow-x:hiddenをoverflow-x:autoに修正します */
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px; */
 }
 
 .box-set {
@@ -134,7 +134,7 @@ main {
     height: 70px;
     border-radius: 5px;
     object-fit: cover;
-    box-shadow: 5px 5px 0px 0 rgb(255, 216, 99);
+    box-shadow: 5px 5px 0px 0 rgb(189 240 234);
   }
 
   /* ボックス名 */
@@ -218,7 +218,7 @@ main {
 
 .post-index-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(3,3fr);
 }
 
 /* タイトル */
@@ -266,8 +266,8 @@ main {
 
 /* インデックス表示画像 */
 .post-index-image {
-  width: 200px;
-  height: 200px;
+  width: 254px;
+  height: 254px;
   border-bottom-left-radius: 20px;
   object-fit: cover;
   filter:blur(20px);

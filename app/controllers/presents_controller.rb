@@ -1,4 +1,5 @@
 class PresentsController < ApplicationController
+  before_action :authenticate_user!, only: %i[new create edit destroy]
   before_action :set_present, only: %i[show edit update destroy]
 
   def index
