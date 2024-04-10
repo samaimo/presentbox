@@ -6,6 +6,7 @@
   <div class="post-box-wrap">
     <p>名前</p>
     <p>誕生日</p>
+    <br>
     <p>所属</p>
     <p>記念日</p>
     <p>好きなもの</p>
@@ -19,13 +20,13 @@
     <!--誕生日-->
     <p>
       <% if @box.birth_day.present? %>
-        <ul class="birth-age">
-          <li id="birth-date">
+        <div class="birth-age">
+          <div id="birth-date">
             <%= @box.birth_day.strftime("%Y年 %-m月 %-d日") %>
-          </li>  
+          </div>
           <!-- 年齢と月齢の表示 -->
-          <li id="age-and-months" class="age">(年齢を表示する)</li>
-        </ul>
+          <div id="age-and-months" class="age">(年齢を表示する)</div>
+        </div>
       <% else %>
         未設定です
       <% end %>

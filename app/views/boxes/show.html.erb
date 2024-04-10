@@ -13,15 +13,26 @@
 
 
 
-      <div class="">
-        <% @presents.each do |present| %>
-          <%= image_tag present.image ,class:"present-image"%>
-        <% end %>
-      </div>
+  <div class="boxin-present">
+    <% @presents.each do |present| %>
+      <%= link_to present_path(present),class:"image_link" do %>
+        <div class="boxshow">
+          <%= image_tag present.image, class: "present-image" %>
+          <p class="boxshow-text"><%= present.title  %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
     </div>
     
     <div class="right-side">
-
+      <!--投稿ボタン-->
+      <a class="purchase-btn" href="/presents/new">
+        <span class="purchase-btn-text">キロク</span>
+        <span class="purchase-btn-text-small">する</span>
+        <%= image_tag "addpresent.png", class:"purchase-btn-icon" %>
+      </a>
     </div>
   </div>
 </main>
