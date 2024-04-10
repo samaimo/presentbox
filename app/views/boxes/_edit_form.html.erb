@@ -29,7 +29,7 @@
     </div>
 
     <!-- お誕生日 -->
-    <div class="form-edit-wrapper">
+    <div class="form-edit-wrapper1">
       <label for="birth-day">お誕生日</label><br>
       <%= render 'form_birthday' %>
       <%#= f.date_select :birth_day, class: "birthday", id: "birth-day", use_month_numbers: true, prompt: '', start_year: 1930, end_year: Time.now.year, date_separator: '' %>
@@ -37,7 +37,7 @@
     </div>
 
     <!-- 記念日 -->
-    <div class="form-edit-wrapper">
+    <div class="form-edit-wrapper2">
       <label for="anniversary-date">記念日</label><br>
       <div class='input-birth-wrap'>
         <%= raw sprintf(
@@ -58,31 +58,31 @@
     </div>
 
     <!-- 記念日のメモ -->
-    <div class="form-edit-wrapper">
+    <div class="form-edit-wrapper3">
       <label for="anniversary-memo">記念日のメモ</label><br>
       <%= f.text_area :anniversary_memo, class: "box-text", id: "anniversary-memo", placeholder: "例) おうち記念日（400文字まで)", maxlength: 400 %>
     </div>
 
     <!-- 所属・職業・特徴 -->
-    <div class="form-edit-wrapper">
+    <div class="form-edit-wrapper4">
       <label for="occupation">所属・職業・特徴</label>
       <%= f.text_area :occupation, class: "box-text", id: "occupation", placeholder: "例) 会社員　日曜大工（必須 40文字まで)", maxlength: 40 %>
     </div>
 
     <!-- 趣味・特技 -->
-    <div class="form-edit-wrapper">
+    <div class="form-edit-wrapper5">
       <label for="hobbies">趣味・特技</label><br>
       <%= f.text_area :hobbies, class: "box-text", id: "hobbies", placeholder: "例) お昼寝（40文字まで)", maxlength: 40 %>
     </div>
 
     <!-- 好きなもの -->
-    <div class="form-edit-wrapper">
+    <div class="form-edit-wrapper6">
       <label for="likes">好きなもの</label><br>
       <%= f.text_field :likes, class: "input-default-regular", id: "likes", placeholder: "例) 乾燥ささみ" %>
     </div>
 
     <!-- 苦手なもの -->
-    <div class="form-edit-wrapper">
+    <div class="form-edit-wrapper7">
       <label for="dislikes">苦手なもの</label><br>
       <%= f.text_field :dislikes, class: "input-default-regular", id: "dislikes", placeholder: "例) 大きな音" %>
     </div>

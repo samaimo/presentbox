@@ -3,16 +3,23 @@
 <main>
   <div class="contents-wrap">
     <div class="left-side">
-
-    </div>
-    <div class="center">
-      <!--メイン表示-->
+            <!--メイン表示-->
       <% if current_user == @box.user %>
         <%= render 'show-ed' %>
       <% end %>
       <%= render 'show-main' %>
-
     </div>
+    <div class="center">
+
+
+
+      <div class="">
+        <% @presents.each do |present| %>
+          <%= image_tag present.image ,class:"present-image"%>
+        <% end %>
+      </div>
+    </div>
+    
     <div class="right-side">
 
     </div>

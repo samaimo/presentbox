@@ -20,6 +20,7 @@ class BoxesController < ApplicationController
   end
 
   def show
+    @presents = @box.presents
   end
 
   def edit

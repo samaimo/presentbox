@@ -5,6 +5,7 @@ class PresentsController < ApplicationController
   def index
     if current_user
       @boxes = current_user.boxes
+
     else
       redirect_to new_user_session_path
     end
