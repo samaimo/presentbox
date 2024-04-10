@@ -6,7 +6,9 @@
 
     <div class="center">
       <!--メイン表示-->
-      <%= render 'shared/edit-destroy' %>
+      <% if current_user == @present.user %>
+        <%= render 'shared/edit-destroy' %>
+      <% end %>
       <%= render 'show' %>
 
     </div>
