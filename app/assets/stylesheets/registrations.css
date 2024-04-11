@@ -376,7 +376,7 @@
 
 /* 登録ボタン */
 .register-btn {
-  width: 50%;
+  width: 300px;
   margin-top: 40px; 
   margin-right: auto;
   margin-bottom: 0px;
@@ -384,7 +384,7 @@
 }
 
 .register-red-btn {
-  width: 100%;
+  width: 300px;
   background: #ff7e05;
   border: 2px solid #ff23a7;
   color: #fff;
@@ -458,7 +458,7 @@
 }
 
 .edit-btn {
-  width: 50%;
+  width: 300px;
   margin-top: 40px;
   margin-right: auto;
   margin-bottom: 0px;
