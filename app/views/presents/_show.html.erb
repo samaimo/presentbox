@@ -20,7 +20,9 @@
   <!------------------------>
   <div class="post-article">
     <!--画像表示-->
-    <%= image_tag @present.image, class:"post-image" %> 
+    <% unless @present.image.blank?%>
+      <%= image_tag @present.image, class:"post-image" %> 
+    <% end %>
   </div>
   <div class="post-text">
     <p class="p-name">
@@ -46,6 +48,7 @@
       </svg>
       <a href= "<%= @present.url %>"><%= @present.url %></a>
     </p>
+    <%= image_tag 'image3.png',class:"image3" %>
   </div>
   <!--メッセージ-->
   <% unless @present.message.blank? %>
@@ -71,12 +74,18 @@
   </div>
   <div class="line"></div>
   <span class="occupation-wrap">
-    <span class="dot">⚫︎</span>
-    <span class="occupation">職業</span>
+    <% unless @box.occupation.blank? %>
+      <span class="dot">⚫︎</span>
+      <span class="occupation"><%= @box.occupation %></span>
+    <% end %>
   </span>
+  <% unless @present.memo.blank? %>
+    <div class="memo">
+      <span class="memo-text"><%= @present.memo %></span>
+    </div>
+  <% end %>
 
 
-    <!--メッセージ-->
   
 
 </div>

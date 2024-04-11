@@ -15,12 +15,15 @@
 
   <div class="boxin-present">
     <% @presents.each do |present| %>
-      <%= link_to present_path(present),class:"image_link" do %>
-        <div class="boxshow">
-          <%= image_tag present.image, class: "present-image" %>
-          <p class="boxshow-text"><%= present.title  %></p>
-        </div>
+      <% if present %>
+        <%= link_to present_path(present), class: "image_link" do %>
+          <div class="boxshow">
+            <%= image_tag present.image, class: "present-image" if present.image.attached? %>
+            <p class="boxshow-text"><%= present.title %></p>
+          </div>
+        <% end %>
       <% end %>
+
     <% end %>
   </div>
 

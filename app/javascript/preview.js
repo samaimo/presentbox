@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
   const imageField = document.getElementById('box-image');
   const preview = document.getElementById('image-preview');
+  
 
   if (!imageField || !preview) return null;
 
@@ -32,3 +33,4 @@ window.addEventListener('DOMContentLoaded', function() {
   // ページ読み込み時とファイル選択時にプレビューを更新
   imageField.addEventListener('change', updatePreview);
 });
+
