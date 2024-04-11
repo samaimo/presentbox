@@ -10,7 +10,7 @@
         <!-- 既存の画像のプレビュー -->
         <% if @box.image.attached? %>
           <div id="image-preview">
-            <%= image_tag url_for(@box.image), class: "box-show-image" %>
+            <%= image_tag url_for(@box.image), class: "preview-image" %>
           </div>
         <% end %>
         <div class="click-upload">
