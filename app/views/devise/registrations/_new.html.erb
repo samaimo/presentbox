@@ -1,5 +1,5 @@
 
-  <%#= render 'shared/error_messages', model: f.object %>
+
 
   <div class="form-box1">
     <div class='form-text-wrap'>
@@ -29,6 +29,9 @@
       <span class="required">必須</span>
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
+  </div>
+  <div class="formbox5">
+    <%= render 'shared/error_messages', model: f.object %>
   </div>
 
   <div class='register-btn'>

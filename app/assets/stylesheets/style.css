@@ -632,7 +632,11 @@ form
   width: 200px;
 }
 
-
+.select-dear {
+  text-align: center; /* テキストを中央揃えにする */
+  margin: 0 auto; /* 左右のマージンを自動的に設定して中央に寄せる */
+  width: fit-content; /* コンテンツの幅に合わせる */
+}
 
 
 /* -----------------------------
@@ -650,3 +654,5 @@ form
   font-weight: 500;
   font-style: normal;
 }
+
+
