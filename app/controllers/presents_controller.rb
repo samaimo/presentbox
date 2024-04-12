@@ -26,8 +26,7 @@ class PresentsController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
   def edit
     return if @present.user == current_user
