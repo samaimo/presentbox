@@ -81,6 +81,7 @@ https://presentbox.onrender.com
 | box                    | references       | null:false,foreign_key: true  |
 | event_date             | date             |                         |
 | event_place            | string           |                         |
+| event_url              | text             |                         |
 
 
 ### Association
