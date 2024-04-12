@@ -31,14 +31,15 @@
         </div>
 
     </div>
-
-    <div class="right-side">
-      <!--投稿ボタン-->
-      <a class="purchase-btn" href="/presents/new">
-        <span class="purchase-btn-text">キロク</span>
-        <span class="purchase-btn-text-small">する</span>
-        <%= image_tag "addpresent.png", class:"purchase-btn-icon" %>
-      </a>
-    </div>
+    <% if Box.any? %>
+      <div class="right-side">
+        <!--投稿ボタン-->
+        <a class="purchase-btn" href="/presents/new">
+          <span class="purchase-btn-text">キロク</span>
+          <span class="purchase-btn-text-small">する</span>
+          <%= image_tag "addpresent.png", class:"purchase-btn-icon" %>
+        </a>
+      </div>
+    <% end %>
   </div>
 </main>
