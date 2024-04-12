@@ -9,15 +9,27 @@
     </div>
   <div class="box-menu">
     <!-- ボックス一覧表示 -->
-    <% @boxes.each do |box| %>
+    <% if @boxes.any? %>
+      <% @boxes.each do |box| %>
         <%= link_to box_path(box.id) do %>
           <div class="box-set">
             <%= image_tag box.image, class:"box-icon" if box.image.attached? %>
             <div class="box-name">
-              <%= box.box_name %></div>
+              <%= box.box_name %>
+            </div>
           </div>
         <% end %>
+      <% end %>
+    <% else %>
+      <!-- ボックスが登録されていない場合の処理 -->
+      <div class="box-set">
+        <%= image_tag "samplebox.jpg", class: "box-icon", alt: "サンプルボックス" %>
+        <div class="box-name">
+          サンプルボックス
+        </div>
+      </div>
     <% end %>
+
   </div>
 </div>
 

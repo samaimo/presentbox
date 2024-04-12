@@ -1,15 +1,14 @@
 class PresentsController < ApplicationController
-  before_action :authenticate_user!, only: %i[new create edit destroy]
+  before_action :authenticate_user!, only: %i[new create edit destroy show]
   before_action :set_present, only: %i[show edit update destroy]
 
   def index
     if current_user
       @boxes = current_user.boxes
-
+      @presents = current_user.presents.order('created_at DESC')
     else
       redirect_to new_user_session_path
     end
-    @presents = Present.all.order('created_at DESC')
   end
 
   def new
