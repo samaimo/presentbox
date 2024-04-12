@@ -77,11 +77,9 @@ https://presentbox.onrender.com
 | price                  | integer          |                         |
 | memo                   | string           |                         |
 | url                    | text             |                         |
-| user_id                | integer          | null:false,foreign_key: true  |
-| box_id                 | integer          | null:false,foreign_key: true  |
+| user                   | reference        | null:false,foreign_key: true  |
+| box                    | reference        | null:false,foreign_key: true  |
 | event_date             | date             |                         |
-| event_place            | string           |                         |
-| event_url              | text             |                         |
 
 
 ### Association
