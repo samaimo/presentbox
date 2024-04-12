@@ -20,7 +20,7 @@
 /* ログイン */
 .form-header {
   width: 100%;
-  height: 120px;
+  /* height: 120px; */
   text-align: center;
   font-size: 22px;
   grid-column: 1/11;
@@ -86,8 +86,21 @@
   align-items: center;
 }
 
-/* 送信ボタン*/
+/* 新規ボックス作成ボタン*/
 .make-box-btn {
+  grid-column: 1/11;
+  grid-row: 5;
+  justify-self: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 40px; 
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+/* 新規ボックス作成ボタン*/
+.edit-box-btn {
   grid-column: 1/11;
   grid-row: 5;
   justify-self: center;
@@ -391,7 +404,7 @@
 }
 
 .register-red-btn {
-  width: 100%;
+  width: 300%;
   background: #ff7e05;
   border: 2px solid #ff23a7;
   color: #fff;

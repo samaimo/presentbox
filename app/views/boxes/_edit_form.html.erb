@@ -91,8 +91,11 @@
 
     <!-- 変更ボタン -->
     <div class="sell-btn-contents">
-      <%= f.submit "変更する", class: "sell-btn" %>
-      <%= link_to 'もどる', box_path, class: "back-btn" %>
+      <div class='edit-box-btn'>
+        <%= f.submit "変更する", class: "register-red-btn" %>
+      </div>
+      
+      <%#= link_to 'もどる', box_path, class: "back-btn" %>
     </div>
   </div>
 <% end %>

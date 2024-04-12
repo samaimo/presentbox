@@ -584,7 +584,7 @@ form
 }
 
 .sell-btn-contents {
-  grid-column: 3 / 4;
+  grid-column: 1 / 11;
   grid-row: 3;
 }
 
@@ -643,7 +643,7 @@ form
 フォント指定
 ーーーーーーーーーーーーーーーーーーーーー */
 
-.dear-name, .occupation, .p-name,.present-image, .boxshow-text {
+.dear-name, .occupation, .p-name,.present-image, .boxshow-text, .error-message  {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -656,3 +656,8 @@ form
 }
 
 
+
+.error-message {
+  font-size: 14px;
+  color:#fc2d48;
+}
