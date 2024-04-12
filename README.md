@@ -17,9 +17,11 @@ https://presentbox.onrender.com
 ## プレゼントボックスを作成する
 1. トップページ(一覧ページ)のサインアップアイコンをクリックし、新規ユーザー登録画面に遷移する
 2. 新規ユーザー登録画面でユーザー登録をする
-3. 
+3. プレゼントボックス追加アイコンをクリックし、プレゼントボックス新規作成ページへ遷移
+4. プレゼントボックスを新規作成する
 
 ### プレゼントを作成する
+※ プレゼントボックス作成後に
 
 
 # アプリケーションを作成した背景
@@ -32,64 +34,23 @@ https://presentbox.onrender.com
 
 # データベース設計
 
-## usersテーブル
-
-| Column                 | Type             | Options                 |
-| ---------------------- | ---------------- | ----------------------- |
-| nickname               | string           | null:false              |
-| email                  | string           | null:false, unique:true |
-| encrypted_password     | string           | null:false              |
-
-
-### Association
-- has_many :boxes
-- has_many :presents
-
-## boxesテーブル
-
-| Column                 | Type             | Options                       |
-| ---------------------- | ---------------- | ----------------------------- |
-| box_name               | string           | null:false                    |
-| birthday               | date             |                               |
-| memo                   | text             |                               |
-| anniversary_day        | date             |                               |
-| occupation             | string           |                               |
-| hobbies                | string           |                               |
-| likes                  | string           |                               |
-| dislikes               | string           |                               |
-| favorite_color         | string           |                               |
-| user_id                | integer          | null:false,foreign_key: true  |
-| present_id             | integer          | null:false,foreign_key: true  |
-
-### Association
-- belongs_to :user
-- has_many :presents
-
-## presentsテーブル
-
-| Column                 | Type             | Options                 |
-| ---------------------- | ---------------- | ----------------------- |
-| title                  | string           | null:false              |
-| present_name           | string           |                         |
-| text                   | text             |                         |
-| message                | text             |                         |
-| shop                   | string           |                         |
-| price                  | integer          |                         |
-| memo                   | string           |                         |
-| url                    | text             |                         |
-| user                   | reference        | null:false,foreign_key: true  |
-| box                    | reference        | null:false,foreign_key: true  |
-| event_date             | date             |                         |
-
-
-### Association
-- belongs_to :user
-- has_many :presents
 
 # 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/a2fe250bbcd0d16c6be463010a599c5d.png)](https://gyazo.com/a2fe250bbcd0d16c6be463010a599c5d)
+2024.4.13　グレーの色の項目は今後実装予定
 
 # 開発環境
+・ フロントエンド
+・ バックエンド
+・ インフラ
+・ テスト
+・ テキストエディタ
 
 # ローカルでの動作方法
+以下のコマンドを順に実行
+% git clone
+% cd presentbox
+% bundle install
+% yam install
 
 # 工夫したポイント
