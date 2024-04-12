@@ -181,7 +181,7 @@
   flex-direction: column;
   margin-bottom: 20px;
   grid-column: 2/10;
-  grid-row: 5/7;
+  grid-row: 6/8;
   width: 400px;
   justify-self: center;
 }
@@ -192,7 +192,7 @@
   flex-direction: column;
   margin-bottom: 20px;
   grid-column: 2/10;
-  grid-row: 4;
+  grid-row: 5;
   justify-self: center;
   align-self: center;
 }
@@ -203,7 +203,7 @@
   flex-direction: column;
   margin-bottom: 20px;
   grid-column: 2/10;
-  grid-row: 7/9;
+  grid-row: 8/10;
   justify-self: center;
 }
 
@@ -213,7 +213,7 @@
   flex-direction: column;
   margin-bottom: 20px;
   grid-column: 4/8;
-  grid-row: 9/10;
+  grid-row: 10/11;
   justify-self: center;
 }
 
@@ -223,7 +223,7 @@
   flex-direction: column;
   margin-bottom: 20px;
   grid-column: 4/8;
-  grid-row: 10;
+  grid-row: 11;
   justify-self: center;
 }
 
@@ -233,7 +233,7 @@
   flex-direction: column;
   margin-bottom: 20px;
   grid-column: 4/8;
-  grid-row: 11;
+  grid-row: 12;
   justify-self: center;
 }
 
@@ -243,7 +243,7 @@
   flex-direction: column;
   margin-bottom: 20px;
   grid-column: 4/8;
-  grid-row: 12;
+  grid-row: 13;
   justify-self: center;
 }
 
@@ -253,8 +253,19 @@
   flex-direction: column;
   margin-bottom: 20px;
   grid-column: 4/8;
-  grid-row: 13;
+  grid-row: 14;
   justify-self: center;
+}
+
+/* イベント日付 */
+.form-group11 {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  grid-column: 2/10;
+  grid-row: 4;
+  justify-self: center;
+  align-self: center;
 }
 
 .form-group:first-child {
@@ -404,7 +415,7 @@
 }
 
 .register-red-btn {
-  width: 300%;
+  width: 300px;
   background: #ff7e05;
   border: 2px solid #ff23a7;
   color: #fff;
@@ -478,7 +489,6 @@
 }
 
 .edit-btn {
-  width: 50%;
   margin-top: 40px;
   margin-right: auto;
   margin-bottom: 0px;

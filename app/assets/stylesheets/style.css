@@ -661,3 +661,8 @@ form
   font-size: 14px;
   color:#fc2d48;
 }
+
+.event-date {
+  text-align: end;
+  color:#16eaaf;
+}

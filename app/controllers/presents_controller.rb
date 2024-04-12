@@ -57,6 +57,6 @@ class PresentsController < ApplicationController
 
   def present_params
     params.require(:present).permit(:title, :event_name, :text, :price, :memo, :present_name, :shop, :message,
-                                    :url, :box_id, :image).merge(user_id: current_user.id)
+                                    :url, :box_id, :event_date, :image).merge(user_id: current_user.id)
   end
 end
