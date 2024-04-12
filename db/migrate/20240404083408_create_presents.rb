@@ -9,8 +9,9 @@ class CreatePresents < ActiveRecord::Migration[7.0]
       t.integer     :price
       t.text        :memo
       t.string      :url
-      t.integer     :box_id, null: false
-      t.integer     :user_id, null: false
+      t.references  :box, null: false, foreign_key: true
+      t.references  :user, null: false, foreign_key: true
+      t.date        :event_date
       t.timestamps
     end
   end

@@ -58,8 +58,8 @@ https://presentbox.onrender.com
 | likes                  | string           |                               |
 | dislikes               | string           |                               |
 | favorite_color         | string           |                               |
-| user                   | references       | null:false,foreign_key: true  |
-| present                | references       | null:false,foreign_key: true  |
+| user_id                | integer          | null:false,foreign_key: true  |
+| present_id             | integer          | null:false,foreign_key: true  |
 
 ### Association
 - belongs_to :user
@@ -77,8 +77,8 @@ https://presentbox.onrender.com
 | price                  | integer          |                         |
 | memo                   | string           |                         |
 | url                    | text             |                         |
-| user                   | references       | null:false,foreign_key: true  |
-| box                    | references       | null:false,foreign_key: true  |
+| user_id                | integer          | null:false,foreign_key: true  |
+| box_id                 | integer          | null:false,foreign_key: true  |
 | event_date             | date             |                         |
 | event_place            | string           |                         |
 | event_url              | text             |                         |

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_08_054948) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_05_015112) do
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -65,13 +65,17 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_08_054948) do
     t.integer "price"
     t.text "memo"
     t.string "url"
-    t.integer "box_id", null: false
-    t.integer "user_id", null: false
+    t.bigint "box_id", null: false
+    t.bigint "user_id", null: false
+    t.date "event_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["box_id"], name: "index_presents_on_box_id"
+    t.index ["user_id"], name: "index_presents_on_user_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
+    t.string "nickname", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -79,7 +83,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_08_054948) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "nickname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -87,4 +90,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_08_054948) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "boxes", "users"
+  add_foreign_key "presents", "boxes"
+  add_foreign_key "presents", "users"
 end
