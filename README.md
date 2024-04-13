@@ -46,7 +46,7 @@ https://presentbox.onrender.com
 そうした思い出は、アルバムの中に埋もれていき、後で振り返ることが難しくなります。
 こうした課題を解決するため、`プレゼントの記録に特化したアプリケーションを開発`することにしました。
 
-
+<br><br>
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hYWts/edit?usp=sharing
 
