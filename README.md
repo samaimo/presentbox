@@ -30,7 +30,7 @@ https://presentbox.onrender.com
 2. 必須事項を入力し、`「つくる」ボタン`をクリック  <br>
 **プレゼント作成画面**
 [![Image from Gyazo](https://i.gyazo.com/d077733187e5e991890f70307b10b5cc.gif)](https://gyazo.com/d077733187e5e991890f70307b10b5cc)
-
+<br>
 
 
 # アプリケーションを作成した背景
@@ -60,14 +60,12 @@ https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hY
 詳細表示画面では、`内容の編集削除`、および、`より詳細な情報(誕生日・所属・記念日・好きなもの・嫌いなもの)`を登録することが可能です。 
 <br>
 
-
-
 **プレゼントボックス詳細画面**
 [![Image from Gyazo](https://i.gyazo.com/8403f929f098ca12a90921dab148a019.gif)](https://gyazo.com/8403f929f098ca12a90921dab148a019)
-
+<br>
 
 ### プレゼント管理機能
-プレゼントボックスに紐づく`プレゼント`を`作成`・`編集`・`削除`することができます。
+プレゼントボックスに紐づく`プレゼント`を`作成`・`編集`・`削除`することができます。　　<br>
 ・新規作成機能  
 ・編集削除機能  
 ・詳細表示機能  
