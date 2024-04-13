@@ -23,7 +23,8 @@ https://presentbox.onrender.com
 4. 必須事項を入力し、`「つくる」ボタン`をクリック  
 
 **プレゼントボックス作成画面**  
-https://i.gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30.gif
+
+[![Image from Gyazo](https://i.gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30.gif)](https://gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30)　
 
 ### プレゼントを作成する
 ※ **プレゼントボックス作成後**に**プレゼント追加ボタンが画面の右下に表示**されます。  
@@ -78,9 +79,7 @@ https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hY
 **プレゼントの箱を開ける時のようなワクワク感**を大切にしたくて、プレゼント詳細画面に遷移すると紙吹雪が舞う演出を加えました。  
 
 **プレゼント詳細画面**  
-
-[![Image from Gyazo](https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif)](https://gyazo.com/39deb01632f235c8ff05bd3737366d50)
-
+https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif
 
 # 実装予定の機能
 プレゼントボックスを振り返った時、プレゼントの記録だけでなく思い出が溢れかえるようなツールとなるよう、開発を進めております。 <br>   
