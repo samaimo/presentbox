@@ -66,7 +66,7 @@ https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hY
 <br>
 
 **プレゼントボックス詳細画面**  
-
+https://i.gyazo.com/8403f929f098ca12a90921dab148a019.gif
 [![Image from Gyazo](https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif)](https://gyazo.com/39deb01632f235c8ff05bd3737366d50)
 <br>
 
@@ -80,6 +80,7 @@ https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hY
 
 **プレゼント詳細画面**  
 https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif
+[![Image from Gyazo](https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif)](https://gyazo.com/39deb01632f235c8ff05bd3737366d50)
 
 # 実装予定の機能
 プレゼントボックスを振り返った時、プレゼントの記録だけでなく思い出が溢れかえるようなツールとなるよう、開発を進めております。 <br>   
