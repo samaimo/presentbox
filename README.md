@@ -60,9 +60,6 @@ https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hY
 詳細表示画面では、`内容の編集削除`、および、`より詳細な情報(誕生日・所属・記念日・好きなもの・嫌いなもの)`を登録することが可能です。 
 <br>
 
-**プレゼントボックス詳細画面**
-[![Image from Gyazo](https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif)](https://gyazo.com/39deb01632f235c8ff05bd3737366d50)
-<br>
 
 ### プレゼント管理機能
 プレゼントボックスに紐づく`プレゼント`を`作成`・`編集`・`削除`することができます。　　<br>
