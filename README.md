@@ -62,18 +62,18 @@ https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hY
 2024.4.13　グレーの色の項目は今後実装予定
 
 # 開発環境
-・ フロントエンド
-・ バックエンド
-・ インフラ
-・ テスト
-・ テキストエディタ
+・ フロントエンド  
+・ バックエンド  
+・ インフラ  
+・ テスト  
+・ テキストエディタ  
 
 # ローカルでの動作方法
-以下のコマンドを順に実行
-% git clone https://github.com/samaimo/presentbox
-% cd presentbox
-% bundle install
-% yam install
+以下のコマンドを順に実行  
+% git clone https://github.com/samaimo/presentbox  
+% cd presentbox  
+% bundle install  
+% yam install  
 
 # 工夫したポイント
 デザインや写真や文章を書くことが苦手な人への配慮を意識しております。
