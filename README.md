@@ -21,15 +21,20 @@ https://presentbox.onrender.com
 2. 新規ユーザー登録画面で`ユーザー登録`をする  
 3. ヘッダー右上にある`プレゼントボックス追加アイコン`をクリックし、プレゼントボックス新規作成ページへ遷移  
 4. 必須事項を入力し、`「つくる」ボタン`をクリック  
-**プレゼントボックス作成画面**
+
+**プレゼントボックス作成画面**  
+
 [![Image from Gyazo](https://i.gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30.gif)](https://gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30)　
 
 ### プレゼントを作成する
 ※ **プレゼントボックス作成後**に**プレゼント追加ボタンが画面の右下に表示**されます。  
 1. `プレゼント追加ボタン`をクリックし、プレゼント新規作成ページへ遷移  
 2. 必須事項を入力し、`「つくる」ボタン`をクリック  <br>
-**プレゼント作成画面**
+
+**プレゼント作成画面**  
+
 [![Image from Gyazo](https://i.gyazo.com/d077733187e5e991890f70307b10b5cc.gif)](https://gyazo.com/d077733187e5e991890f70307b10b5cc)
+
 <br>
 
 
@@ -60,6 +65,10 @@ https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hY
 詳細表示画面では、`内容の編集削除`、および、`より詳細な情報(誕生日・所属・記念日・好きなもの・嫌いなもの)`を登録することが可能です。 
 <br>
 
+**プレゼントボックス詳細画面**  
+
+[![Image from Gyazo](https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif)](https://gyazo.com/39deb01632f235c8ff05bd3737366d50)
+<br>
 
 ### プレゼント管理機能
 プレゼントボックスに紐づく`プレゼント`を`作成`・`編集`・`削除`することができます。　　<br>
@@ -69,7 +78,8 @@ https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hY
 
 **プレゼントの箱を開ける時のようなワクワク感**を大切にしたくて、プレゼント詳細画面に遷移すると紙吹雪が舞う演出を加えました。  
 
-**プレゼント詳細画面**
+**プレゼント詳細画面**  
+
 [![Image from Gyazo](https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif)](https://gyazo.com/39deb01632f235c8ff05bd3737366d50)
 
 
