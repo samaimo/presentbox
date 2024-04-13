@@ -23,8 +23,7 @@ https://presentbox.onrender.com
 4. 必須事項を入力し、`「つくる」ボタン`をクリック  
 
 **プレゼントボックス作成画面**  
-
-[![Image from Gyazo](https://i.gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30.gif)](https://gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30)　
+https://i.gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30.gif
 
 ### プレゼントを作成する
 ※ **プレゼントボックス作成後**に**プレゼント追加ボタンが画面の右下に表示**されます。  
