@@ -16,7 +16,7 @@
       <span class="required">必須</span>
       <!--<p class="title-text">プレゼントしたいイベント名や目的、その時の気持ちなどを一つ入力してください。</p>-->
     </div>
-      <%= f.text_area :title, class:"input-default", placeholder:"例) 20歳の誕生日プレゼント", maxlength:"40" %>
+      <%= f.text_area :title, class:"input-default", placeholder:"例) 20歳の誕生日プレゼント(17文字以内)", maxlength:"17" %>
     
   </div>
 
@@ -95,7 +95,7 @@
       <div class='form-text-wrap'>
         <label class="form-text">memo</label>
       </div>
-      <%= f.text_area :memo, class:"input-caption", id:"memo", placeholder:"例) 築地のおじちゃんがいい人だった。 " %>
+      <%= f.text_area :memo, class:"input-caption", id:"memo", placeholder:"例) 築地のおじちゃんがいい人だった。(30文字以内) ",maxlength:"30" %>
     </div>
 
 
