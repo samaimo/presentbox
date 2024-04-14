@@ -71,12 +71,6 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'devise'
-gem 'image_processing', '~> 1.2'
-gem 'mini_magick'
-gem 'pry'
-gem 'pry-rails'
-
 group :development do
   gem 'rubocop', require: false
 end
@@ -84,3 +78,9 @@ end
 group :production do
   gem 'pg'
 end
+
+gem 'devise'
+gem 'image_processing', '~> 1.2'
+gem 'mini_magick'
+gem 'pry'
+gem 'pry-rails'
