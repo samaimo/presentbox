@@ -1,6 +1,6 @@
 class BoxesController < ApplicationController
   before_action :set_box, only: %i[edit show update destroy]
-  before_action :move_to_index, except: %i[index update show destroy]
+  before_action :move_to_index, except: %i[index new edit update show destroy]
 
   def index
     @boxes = Box.includes(:user).order('created_at DESC')
@@ -20,6 +20,19 @@ class BoxesController < ApplicationController
   end
 
   def show
+    # ログインしていない場合はログインページにリダイレクト
+    unless user_signed_in?
+      redirect_to new_user_session_path
+      return
+    end
+
+    # ボックスの投稿者でない場合はトップページにリダイレクト
+    unless @box.user == current_user
+      redirect_to root_path
+      return
+    end
+
+    # ボックスの投稿者の場合は詳細情報を表示
     @presents = @box.presents
   end
 

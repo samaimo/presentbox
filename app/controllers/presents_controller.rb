@@ -26,6 +26,10 @@ class PresentsController < ApplicationController
   end
 
   def show
+    # プレゼントの投稿者でない場合はトップページにリダイレクト
+    return if @present.user == current_user
+
+    redirect_to root_path
   end
 
   def edit
