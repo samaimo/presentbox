@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to:  'presents#index'
   resources :boxes
   resources :presents
+  resources :mypages
 end
