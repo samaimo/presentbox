@@ -1,20 +1,23 @@
 # アプリケーション名
 **Prebo (プレボ)**
-
+<br>
+<br>
 # アプリケーション概要
 `プレゼントを記録し、思い出を大切にするアプリケーション`です。
 プレゼントを贈る大切な人を思い浮かべて**プレゼントボックスを作成**し、その箱に**プレゼントを一つ一つ入れていく**ようなイメージで、`プレゼントを贈った相手`と`プレゼント`の`記録を作る`ことができます。
-
-
+<br>
+<br>
 # URL
 https://presentbox.onrender.com
-
+<br>
+<br>
 # テスト用アカウント
 ・ Basic認証パスワード：`admin`  
 ・ Basic認証ID：`2222`  
 ・ メールアドレス：`test@test`  
 ・ パスワード：`111aaa`  
-
+<br>
+<br>
 # 利用方法
 ## プレゼントボックスを作成する
 1. トップページ(一覧ページ)の`サインアップアイコン`をクリックし、新規ユーザー登録画面に遷移する  
@@ -36,7 +39,7 @@ https://presentbox.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/d077733187e5e991890f70307b10b5cc.gif)](https://gyazo.com/d077733187e5e991890f70307b10b5cc)
 
 <br>
-
+<br>
 
 # アプリケーションを作成した背景
 `プレゼントをする`という行為はとても素敵なイベントですが、何を渡したのかわからなくなってしまうことが多々あります。
@@ -49,8 +52,8 @@ https://presentbox.onrender.com
 <br><br>
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/1WjMNwPp2_6gxAwK0LaxKFQ947SStH2WuJ2OEK9hYWts/edit?usp=sharing
-
-
+<br>
+<br>
 # 実装した機能についての画像やGIFおよびその説明
 プレゼントを贈る大切な人を思い浮かべて`プレゼントボックス`を作成し、その箱に`プレゼント`を一つずつ入れていくようなイメージで、
 `プレゼントを贈った相手`と`プレゼントの記録`を作ることができます。
@@ -81,7 +84,8 @@ https://i.gyazo.com/8403f929f098ca12a90921dab148a019.gif
 **プレゼント詳細画面**  
 https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif
 [![Image from Gyazo](https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif)](https://gyazo.com/39deb01632f235c8ff05bd3737366d50)
-
+<br>
+<br>
 # 実装予定の機能
 プレゼントボックスを振り返った時、プレゼントの記録だけでなく思い出が溢れかえるようなツールとなるよう、開発を進めております。 <br>   
 ・画像の複数投稿機能  
@@ -90,21 +94,22 @@ https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif
 ・プレゼントを渡した場所の記録機能  
 ・カレンダー機能  
 ・プレゼント詳細ページを画像生成する機能  <br>
-
+<br>
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/f40cd95be8486c01b0b692db52761565.png)](https://gyazo.com/f40cd95be8486c01b0b692db52761565)
-
+<br><br>
 # 画面遷移図
 [![Image from Gyazo](https://i.gyazo.com/a2fe250bbcd0d16c6be463010a599c5d.png)](https://gyazo.com/a2fe250bbcd0d16c6be463010a599c5d)  
 2024.4.13　グレーの色の項目は今後実装予定  
-
+<br><br>
 # 開発環境
 ・ フロントエンド  
 ・ バックエンド  
 ・ インフラ  
 ・ テスト  
 ・ テキストエディタ  
-
+<br>
+<br>
 # ローカルでの動作方法
 以下のコマンドを順に実行
 ``` shell 
@@ -113,7 +118,8 @@ https://i.gyazo.com/39deb01632f235c8ff05bd3737366d50.gif
 % bundle install  
 % yam install  
 ```
-
+<br>
+<br>
 # 工夫したポイント
 `デザインや写真や文章を書くことが苦手な人への配慮`を意識しております。
 特に、`プレゼントの詳細ページ`は、最小限の入力項目で`雑誌の１ページのようなデザイン`としてまとまるようにレイアウトを工夫しました。
