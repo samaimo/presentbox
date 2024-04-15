@@ -9,7 +9,7 @@
       <!--ログイン・ログアウト・新規登録表示-->
       <span class="login-icon" style="display: flex; justify-content: flex-end;">
         <% if user_signed_in? %>
-          <%= link_to current_user.nickname, "#", class: "user-nickname" %>
+          <%= link_to current_user.nickname, mypages_path, class: "user-nickname" %>
           <!--ログアウト-->
           <%= link_to destroy_user_session_path ,class: "register-link", data: {turbo_method: :delete} do %>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="lightblue" class="bi bi-door-open" viewBox="0 0 16 16">
