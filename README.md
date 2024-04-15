@@ -28,8 +28,9 @@ https://presentbox.onrender.com
 
 ### 新規ユーザー登録
 1. トップページ(一覧ページ)の`サインアップアイコン`をクリックし、新規ユーザー登録画面に遷移する
-   [![Image from Gyazo](https://i.gyazo.com/14c11805d438a4bbd8caf87ee3d3e2d2.gif)](https://gyazo.com/14c11805d438a4bbd8caf87ee3d3e2d2)
 2. 新規ユーザー登録画面で`ユーザー登録`をする 
+   [![Image from Gyazo](https://i.gyazo.com/14c11805d438a4bbd8caf87ee3d3e2d2.gif)](https://gyazo.com/14c11805d438a4bbd8caf87ee3d3e2d2)
+
 
 <br>
 
