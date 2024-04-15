@@ -36,7 +36,10 @@ https://presentbox.onrender.com
 
 ### プレゼントボックスを作成する
 1. ヘッダー右上にある`プレゼントボックス追加アイコン`をクリックし、プレゼントボックス新規作成ページへ遷移  
-2. 必須事項を入力し、`「つくる」ボタン`をクリック  
+2. 必須事項を入力し、`「つくる」ボタン`をクリック
+
+<br>
+
 **プレゼントボックス作成画面**  
 
 [![Image from Gyazo](https://i.gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30.gif)](https://gyazo.com/8d155ea96cbf2bd56b8cc77d82c0aa30)　
