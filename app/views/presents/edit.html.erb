@@ -1,23 +1,25 @@
-<%= render partial: "shared/second-header" %>
+<%= form_with model: @present, url: present_path, class: 'registration-main', id: "new_post", local: true do |f| %>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>
+        プレゼントを編集する
+      </h1>
+    </div>
 
+    <%= render partial: 'form', locals: { f: f, present: @present } %>
 
-<%= form_with model: @present, url: present_path, class: 'registration-main', id:"new_post", local: true do |f| %>
-<div class='form-wrap'>
-  <div class='form-header'>
-    <h1 class='form-header-text'>
-      プレゼントを編集する
-    </h1>
+    <div class='edit-btn'>
+      <%= f.submit "変更する", class: "register-red-btn" %>
+    </div>
+
+    <!--削除-->
+    <div class="d-btn">
+      <div class="check-text">
+        <input id="check" type="checkbox">本当に削除しますか？
+      </div>
+      <%= link_to present_path(@present.id), data: { turbo_method: :delete } do %>
+        <%= f.submit "削除する", id: "bnt", disabled: true %>
+      <% end %>
+    </div>
   </div>
-
-  <%= render partial: 'form', locals: { f: f, present: @present } %>
-
-
-
-  <div class='edit-btn'>
-    <%= f.submit "変更する" ,class:"register-red-btn" %>
-  </div>
-</div>
 <% end %>
-
-<%= render "shared/second-footer"%>
-

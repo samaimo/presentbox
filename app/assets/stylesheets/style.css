@@ -666,3 +666,16 @@ form
   text-align: end;
   color:#16eaaf;
 }
+
+/* プレゼント編集画面 */
+.d-btn {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  grid-column: 1 / 11;
+  grid-row: 16;
+  justify-self: center;
+  align-self: center;
+}
+
