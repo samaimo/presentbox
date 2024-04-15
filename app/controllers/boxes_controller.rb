@@ -31,9 +31,8 @@ class BoxesController < ApplicationController
       redirect_to root_path
       return
     end
-
     # ボックスの投稿者の場合は詳細情報を表示
-    @presents = @box.presents
+    @presents = @box.presents.order('event_date DESC')
   end
 
   def edit

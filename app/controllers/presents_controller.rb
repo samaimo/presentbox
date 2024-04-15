@@ -5,7 +5,7 @@ class PresentsController < ApplicationController
   def index
     if current_user
       @boxes = current_user.boxes
-      @presents = current_user.presents.order('created_at DESC')
+      @presents = current_user.presents.order('event_date DESC')
     else
       redirect_to new_user_session_path
     end
