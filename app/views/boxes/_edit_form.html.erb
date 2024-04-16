@@ -93,9 +93,17 @@
     <div class="sell-btn-contents">
       <div class='edit-box-btn'>
         <%= f.submit "変更する", class: "register-red-btn" %>
-      </div>
-      
+      </div> 
       <%#= link_to 'もどる', box_path, class: "back-btn" %>
+    </div>
+    <!--削除-->
+    <div class="bd-btn">
+      <div class="check-text">
+        <input id="check" type="checkbox">本当に削除しますか？
+      </div>
+      <%= link_to box_path(@box.id), data: { turbo_method: :delete } do %>
+        <%= f.submit "削除する", id: "bnt", disabled: true %>
+      <% end %>
     </div>
   </div>
 <% end %>

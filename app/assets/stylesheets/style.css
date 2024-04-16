@@ -573,6 +573,10 @@ form
   top: -50px;
 }
 
+.ed-button {
+  margin-right: 20px;
+}
+
 /* ---------------------------
      ボックス編集画面
 ---------------------------*/
@@ -586,6 +590,8 @@ form
 .sell-btn-contents {
   grid-column: 1 / 11;
   grid-row: 3;
+  justify-self: center;
+  align-self: center;
 }
 
 /* 入力フォーム */

@@ -100,11 +100,6 @@
 
 /* 新規ボックス作成ボタン*/
 .edit-box-btn {
-  grid-column: 1/11;
-  grid-row: 5;
-  justify-self: center;
-  align-items: center;
-  width: 50%;
   margin-top: 40px; 
   margin-right: auto;
   margin-bottom: 0px;
@@ -515,4 +510,17 @@
 #bnt:disabled {
   background-color: #ccc;
   border: 2px solid #737373;
+}
+
+
+/* ボックス削除ボタン */
+.bd-btn {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  grid-column: 1 / 11;
+  grid-row: 4;
+  justify-self: center;
+  align-self: center;
 }
