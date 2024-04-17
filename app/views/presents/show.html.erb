@@ -2,8 +2,9 @@
 <!--メイン-->
 <main>
   <div class="contents-wrap">
-    <div class="left-side"></div>
-
+    <div class="left-side">
+      <%= render 'left_side' %>
+    </div>
     <div class="center">
       <!--メイン表示-->
       <% if current_user == @present.user %>
@@ -13,7 +14,7 @@
 
     </div>
     <div class="right-side">
-
+      
     </div>
   </div>
 </main>

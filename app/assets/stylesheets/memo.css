@@ -1,0 +1,61 @@
+.filelabel {
+  margin: 3px;
+  background-color: rgb(165, 238, 255);  /* 背景色 */
+  color: white;              /* 文字色 */
+  border-radius: 3em;        /* 角丸 */
+  padding: 2px 5px;         /* 内側の余白 */
+  display: inline-block;     /* インラインブロック化 */
+}
+.filelabel img {
+  vertical-align: bottom;    /* 画像の垂直方向の配置 */
+}
+.filelabel:hover {
+  opacity: 0.5;              /* 半透明 */
+  cursor: pointer;           /* マウス形状(ポインタ) */
+}
+.filesend {
+  display: none;  /* 本来のファイル選択フォームは非表示に */
+}
+/* --------------------------------------------------------- */
+.memo-wrap {
+  display: flex;
+  border-radius: 3em;
+  border: solid 1px #ccc;
+
+}
+
+.memo-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------------------------------------------------------- */
+
+.send {
+  background-color: rgb(165, 238, 255);  /* 背景色 */
+  color: white;              /* 文字色 */
+  /* border-radius: 3em;        角丸 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  height: 33px;
+  width: 33px;
+}
+.send img {
+  vertical-align: center;    /* 画像の垂直方向の配置 */
+}
+.send:hover {
+  opacity: 0.5;              /* 半透明 */
+  border: 2px solid rgb(0, 166, 255);     /* 枠線(赤色) */
+  cursor: pointer;           /* マウス形状(ポインタ) */
+}
+
+/* テキスト入力フォーム */
+.memo-inputbox {
+  border-radius: 3em; /*角丸*/
+  border: solid 1px #ffffff00;
+  height: 30px; 
+  padding: 0 1rem;
+}
