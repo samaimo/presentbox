@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :boxes
   resources :presents
   resources :mypages
+  resources :memos
 end

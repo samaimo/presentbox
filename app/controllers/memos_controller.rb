@@ -1,0 +1,3 @@
+class MemosController < ApplicationController
+
+end
