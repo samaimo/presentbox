@@ -1,24 +1,18 @@
 class MemosController < ApplicationController
-  def index
-    @memos = Memo.all
-  end
-
-  def new
-    @memo = Memo.new
-  end
-
   def create
     @memo = Memo.new(memo_params)
-    if @memo.save
-      redirect_to root_path
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @memo.save
+    redirect_to "/presents/#{params[:present_id]}" # コメントと結びつくツイートの詳細画面に遷移する
+  end
+
+  def show
+    @present = Present.find(params[:present_id])
+    @memos = @present.memos.order(created_at: :desc)
   end
 
   private
 
   def memo_params
-    params.require(:memo).permit(:text, :image, :present_id).merge(user_id: current_user.id)
+    params.require(:memo).permit(:text, :image).merge(user_id: current_user.id, present_id: params[:present_id])
   end
 end
