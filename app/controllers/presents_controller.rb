@@ -27,9 +27,10 @@ class PresentsController < ApplicationController
 
   def show
     # プレゼントの投稿者でない場合はトップページにリダイレクト
-    return if @present.user == current_user
+    return redirect_to root_path unless @present.user == current_user
 
-    redirect_to root_path
+    @memo = Memo.new
+    @memos = @present.memos.includes(:user)
   end
 
   def edit
