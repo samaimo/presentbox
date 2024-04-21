@@ -10,6 +10,12 @@ class MemosController < ApplicationController
     @memos = @present.memos.order(created_at: :desc)
   end
 
+  def delete
+    @memo = Memo.find(params[:id])
+    @memo.destroy
+    redirect_to "/presents/#{params[:present_id]}"
+  end
+
   private
 
   def memo_params
