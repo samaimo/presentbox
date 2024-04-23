@@ -1,6 +1,5 @@
 class MemosController < ApplicationController
-  before_action :authenticate_user!, only: %i[create destroy]
-  before_action :set_memo, only: [:destroy]
+  # before_action :authenticate_user!, only: %i[create destroy]
 
   def create
     @memo = Memo.new(memo_params)
@@ -9,17 +8,14 @@ class MemosController < ApplicationController
   end
 
   def destroy
+    @memo = Memo.find(params[:id]) # 削除したいメモのIDを取得
     @memo.destroy
-    redirect_to present_path(@memo.present_id)
+    redirect_to present_path(@memo.present_id) # リダイレクト先
   end
 
   private
 
   def memo_params
     params.require(:memo).permit(:text, :image).merge(user_id: current_user.id, present_id: params[:present_id])
-  end
-
-  def set_memo
-    @memo = Memo.find(params[:id])
   end
 end
