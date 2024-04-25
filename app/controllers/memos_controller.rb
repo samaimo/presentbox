@@ -4,7 +4,7 @@ class MemosController < ApplicationController
   def create
     @memo = Memo.new(memo_params)
     @memo.save
-    redirect_to "/presents/#{params[:present_id]}" # コメントと結びつくツイートの詳細画面に遷移する
+    redirect_to present_path(@memo.present_id) # コメントと結びつくツイートの詳細画面に遷移する
   end
 
   def destroy
