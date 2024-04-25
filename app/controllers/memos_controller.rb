@@ -1,5 +1,5 @@
 class MemosController < ApplicationController
-  # before_action :authenticate_user!, only: %i[create destroy]
+  before_action :authenticate_user!, only: %i[create destroy]
 
   def create
     @memo = Memo.new(memo_params)
